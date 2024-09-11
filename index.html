@@ -3,75 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Animado</title>
+    <title>Portfólio - Desenvolvedor Front-End</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: 'Arial', sans-serif;
             margin: 0;
-            background-color: #f3f4f6;
+            padding: 0;
+            background-color: #f4f4f9;
         }
 
-        .card {
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 300px;
-            padding: 20px;
+        header {
+            background-color: #38613e;
+            color: white;
+            padding: 20px 0;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
         }
 
-        .card img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
+        nav {
+            margin-top: 20px;
         }
 
-        .card h2 {
-            margin: 15px 0;
-            font-size: 22px;
-            color: #333;
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        .card p {
-            color: #777;
-            font-size: 16px;
+        section {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .btn {
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        .btn:hover {
-            background-color: #2980b9;
+        .about img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            max-width: 600px;
+        }
+
+        h2 {
+            color: #db0707;
+        }
+
+        p {
+            color: #34495e;
+            line-height: 1.8;
+        }
+
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .portfolio-item {
+            background-color: rgb(113, 19, 201);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(116, 63, 63, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .portfolio-item h3 {
+            margin: 15px 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .portfolio-item p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        footer {
+            background-color: #f31919;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <img src="https://via.placeholder.com/100" alt="Imagem do Card">
-        <h2>Nome do Card</h2>
-        <p>Descrição breve sobre o conteúdo do card. Algo interessante e informativo.</p>
-        <button class="btn">Saiba Mais</button>
-    </div>
+    <header>
+        <h1>marina</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="sobre" class="about">
+        <img src="https://via.placeholder.com/300" alt="Foto do Desenvolvedor">
+        <div class="about-text">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Sou [marina], um desenvolvedor front-end apaixonado por picles. Tenho experiência em front end.</p>
+            </section>
+
+    <section id="portfolio">
+        <h2>Meu Portfólio</h2>
+        <div class="portfolio">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
+                <h3>Projeto 1</h3>
+                <p>sim :] </p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300x200" alt="Projeto 2">
+                <h3>Projeto 2</h3>
+                <p>Projeto de site responsivo desenvolvido com HTML5, CSS3 e JavaScript puro.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300x200" alt="Projeto 3">
+                <h3>Projeto 3</h3>
+                <p>Landing page moderna e otimizada para SEO, criada com Bootstrap e jQuery.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <p>Entre em contato: <a href="mailto:email@exemplo.com">email@exemplo.com</a></p>
+        <p>Siga-me nas redes sociais: 
+            <a href="#">LinkedIn</a> | 
+            <a href="#">GitHub</a> | 
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
 
 </body>
 </html>
